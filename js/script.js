@@ -19,7 +19,11 @@ console.log(cognomi);
 cognomi = cognomi.sort();
 
 // Stampare la lista in ordine alfabetico
-console.log(cognomi);
+console.log(cognomi.sort());
+for (var i = 0; i < cognomi.length; i++) {
+  document.getElementById("lista").innerHTML += "<li>" + cognomi[i] + "</li>";
+};
 
 // Stampare la posizione del nuovo cognome
-console.log(cognomi.indexOf(cognomeUtente) + 1);
+var posizione = cognomi.indexOf(cognomeUtente) + 1;
+document.getElementById("posizione").innerHTML = posizione;
